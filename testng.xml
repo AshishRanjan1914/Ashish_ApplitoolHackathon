@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ApplitoolHackathonTestSuite">
+  <test thread-count="5" name="ApplitoolHackathonTests">
+    <classes>      
+      <class name="mytests.TraditionalTests"/>
+      <class name="mytests.VisualAITests"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
