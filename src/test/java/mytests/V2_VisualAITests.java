@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import com.applitools.eyes.RectangleSize;
 
-public class VisualAITests extends MainClass{
+public class V2_VisualAITests extends MainClass{
 
 	WebDriverWait wait;
 	@Test(priority = 1)

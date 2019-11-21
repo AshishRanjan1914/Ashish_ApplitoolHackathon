@@ -16,15 +16,15 @@ import org.testng.annotations.Test;
 
 import utility.General;
 
-public class TraditionalTests extends MainClass{
+public class V1_TraditionalTests extends MainClass{
 
 	WebDriverWait wait;
 	General general = new General(getDriver(), getObjectProp());
 		
 	@Test(priority = 1)
-	public void loginPageUIElementTest() throws Exception {
+	public void v1loginPageUIElementTest() throws Exception {
 		System.out.println("loginPageUIElementTest !");		
-		driver.get(CONFProp.getProperty("HackathonV2BASEURL"));
+		driver.get(CONFProp.getProperty("HackathonV1BASEURL"));
 
 		assertEquals(driver.findElement(general.getLocator(getObjectProp().getProperty("AuthHeader"))).getText(), "Login Form");
 
@@ -54,10 +54,10 @@ public class TraditionalTests extends MainClass{
 
 
 	@Test(priority = 2, dataProvider = "loginTestData")
-	public void dataDrivenTest(String username, String password) throws Exception {
+	public void v1dataDrivenTest(String username, String password) throws Exception {
 		System.out.println("dataDrivenTest :: Username -"+username+" == Password - "+password);		
 
-		driver.navigate().to(CONFProp.getProperty("HackathonV2BASEURL"));
+		driver.navigate().to(CONFProp.getProperty("HackathonV1BASEURL"));
 		wait = new WebDriverWait(getDriver(), 60);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("username")));
 
@@ -78,8 +78,8 @@ public class TraditionalTests extends MainClass{
 	
 	
 	@Test(priority = 3)
-	public void TableSortingTest() throws Exception {
-		driver.navigate().to(CONFProp.getProperty("HackathonV2BASEURL"));
+	public void v1TableSortingTest() throws Exception {
+		driver.navigate().to(CONFProp.getProperty("HackathonV1BASEURL"));
 		wait = new WebDriverWait(getDriver(), 60);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("username")));
 
@@ -117,7 +117,7 @@ public class TraditionalTests extends MainClass{
 	}
 	
 	@Test(priority = 4)
-	public void CanvasChartTest() throws Exception {
+	public void v1CanvasChartTest() throws Exception {
 		/* Unable to automate it,
 		 * We can't inspect canvas chart to make validations.
 		 */		
@@ -125,9 +125,9 @@ public class TraditionalTests extends MainClass{
 	}
 	
 	@Test(priority = 5)
-	public void DynamicContentTest() throws Exception {
+	public void v1DynamicContentTest() throws Exception {
 				
-		driver.navigate().to(CONFProp.getProperty("HackathonV2BASEURL"));
+		driver.navigate().to(CONFProp.getProperty("HackathonV1BASEURL"));
 		wait = new WebDriverWait(getDriver(), 60);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("username")));
 

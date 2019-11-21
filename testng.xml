@@ -3,8 +3,10 @@
 <suite name="ApplitoolHackathonTestSuite">
   <test thread-count="5" name="ApplitoolHackathonTests">
     <classes>      
-      <class name="mytests.TraditionalTests"/>
-      <class name="mytests.VisualAITests"/>
+      <class name="mytests.V1_TraditionalTests"/>
+      <class name="mytests.V1_VisualAITests"/>
+      <class name="mytests.V2_TraditionalTests"/>
+      <class name="mytests.V2_VisualAITests"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
